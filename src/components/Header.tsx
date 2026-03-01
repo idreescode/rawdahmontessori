@@ -22,6 +22,7 @@ export default function Header({ linkPrefix = "" }: { linkPrefix?: string }) {
                   <li><a href={`${linkPrefix}#about`}>ABOUT MONTESSORI</a></li>
                   <li><a href={`${linkPrefix}#admission`}>ADMISSION ENQUIRIES</a></li>
                   <li><a href={`${linkPrefix}#recruitment`}>RECRUITMENT</a></li>
+                  <li><Link href="/dashboard">DASHBOARD</Link></li>
                 </ul>
               </div>
             </div>

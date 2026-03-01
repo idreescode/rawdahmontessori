@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(test:*)",
+      "Bash(mkdir:*)",
+      "Bash(do touch:*)",
+      "Bash(npm run:*)"
+    ]
+  }
+}
