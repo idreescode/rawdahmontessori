@@ -13,15 +13,16 @@ export default function Header({ linkPrefix = "" }: { linkPrefix?: string }) {
                 <Link href="/">
                   <img src="/images/logo.png" alt="Rawdah Montessori" />
                 </Link>
-                <MobileMenu>
-                  <ul>
-                    <li><a href={`${linkPrefix}#mission`}>MISSION</a></li>
-                    <li><a href={`${linkPrefix}#vision`}>VISION</a></li>
-                    <li><a href={`${linkPrefix}#about`}>ABOUT MONTESSORI</a></li>
-                    <li><a href={`${linkPrefix}#admission`}>ADMISSION ENQUIRIES</a></li>
-                    <li><a href={`${linkPrefix}#recruitment`}>RECRUITMENT</a></li>
-                  </ul>
-                </MobileMenu>
+                <MobileMenu />
+              </div>
+              <div className="menu">
+                <ul>
+                  <li><a href={`${linkPrefix}#mission`}>MISSION</a></li>
+                  <li><a href={`${linkPrefix}#vision`}>VISION</a></li>
+                  <li><a href={`${linkPrefix}#about`}>ABOUT MONTESSORI</a></li>
+                  <li><a href={`${linkPrefix}#admission`}>ADMISSION ENQUIRIES</a></li>
+                  <li><a href={`${linkPrefix}#recruitment`}>RECRUITMENT</a></li>
+                </ul>
               </div>
             </div>
           </div>
