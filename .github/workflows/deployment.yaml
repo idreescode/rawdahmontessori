@@ -1,45 +1,41 @@
-# Deploy site via SFTP using credentials from environment / secrets
-#
-# Use these settings in your favourite FTP programme (SFTP):
-#   Server/Host: access-5017191008.webspace-host.com (or set FTP_SERVER)
-#   Port: 22
-#   Protocol: SFTP
-#
-# Required (set as GitHub repository secrets):
-#   FTP_SERVER   - e.g. access-5017191008.webspace-host.com
-#   FTP_USERNAME - SFTP user (e.g. a2068628)
-#   FTP_PASSWORD - Password for this access
-#
-# Optional (repository variable or secret):
-#   FTP_REMOTE_PATH - remote directory (default: /)
-#
-name: Deploy via SFTP
+name: Deploy to VPS
 
 on:
   push:
     branches: [main]
-  workflow_dispatch: # Allow manual run
-
-env:
-  FTP_SERVER: ${{ secrets.FTP_SERVER }}
-  FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-  FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-  FTP_REMOTE_PATH: ${{ vars.FTP_REMOTE_PATH }}
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Deploy via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+      - uses: actions/setup-node@v4
         with:
-          server: ${{ env.FTP_SERVER }}
-          username: ${{ env.FTP_USERNAME }}
-          password: ${{ env.FTP_PASSWORD }}
-          port: 22
-          local_path: "./*"
-          remote_path: ${{ env.FTP_REMOTE_PATH || '/' }}
-          sftp_only: true
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate Prisma client
+        run: npx prisma generate
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            cd /var/www/rawdah-montessori
+            git pull origin main
+            npm ci --production
+            npx prisma generate
+            npx prisma migrate deploy
+            npm run build
+            pm2 restart rawdah-montessori || pm2 start ecosystem.config.js
