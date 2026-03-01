@@ -1,42 +1,1939 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*Default CSS*/
+html{
+	font-size: 62.5%;
+	overflow-x: hidden !important;
+}
+body{	
+	font-size: 1.6rem;
+	font-family: 'Avenir Next LT Pro';
+	font-weight: 400;
+	overflow-x: hidden !important;
+	background: #F8F2E3;
+
+	/*	font-family: 'Berlingske Serif';	*/
+}
+h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul li a,a{
+	text-decoration: none;
+}
+a{
+	transition: 0.3s;
+}
+h1{
+	font-family: 'Berlingske Serif';
+	font-size: 70px;
+	line-height: 100%;
+}
+h2{
+	font-family: 'Berlingske Serif';
+	font-size: 38px;
+	line-height: 100%;
+	font-weight: 600;
+	color: #003D55;
+}
+.btn_style {
+    padding: 16px 38px;
+    font-size: 18px;
+    /* font-weight: 500; */
+    color: #FFFFFF;
+    background: #BE9641;
+    border-radius: 6px;
+    border: 1px solid #BE9641;
+    display: inline-block;
+}
+.btn_style:hover{
+	background: #FFFFFF;
+	color: #BE9641;
+}
+.mt-30{
+	margin-top: 30px !important;
+}
+.mt-50{
+	margin-top: 50px !important;
+}
+.mb-0{
+	margin-bottom: 0px !important;
+}
+.mb-12{
+	margin-bottom: 12px !important;
+}
+/*=================  Start Header Section  =================*/
+.header_main{
+	padding: 30px 0px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 99;
+}
+.header_main.fixed {
+    position: fixed;
+    background: rgba(0, 61, 85, 0.92);
+    border-bottom: 1px solid #ffffff52;
+    padding: 20px 0px 5px 0px;
+}
+.header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.logo a img{
+	width: 335px;
+	height: auto;
+}
+.menu ul{
+	display: flex;
+	align-items: center;
+	gap: 70px;
+	padding-bottom: 35px;
+	border-bottom: 1px solid #FFFFFF26;
+}
+.menu ul li a{
+	font-size: 14px;
+	line-height: 100%;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+.menu ul li a:hover{
+	color: #BE9641;
+}
+.menu ul li a.active{
+    color: #BE9641;
+}
+/*Start Mobile Menu icon*/
+#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
+	width: 28px;
+	height: 23px;
+	position: relative;
+	margin: 0px;
+	-webkit-transform: rotate(0deg);
+	    -ms-transform: rotate(0deg);
+	        transform: rotate(0deg);
+	-webkit-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+	cursor: pointer;
+}
+#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
+	display: block;
+	position: absolute;
+	height: 3px;
+	width: 100%;
+	background: #FFFFFF;
+	border-radius: 0px;
+	opacity: 1;
+	left: 0;
+	-webkit-transform: rotate(0deg);
+	    -ms-transform: rotate(0deg);
+	        transform: rotate(0deg);
+	-webkit-transition: .25s ease-in-out;
+	-o-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
+}
+#nav-icon4 span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+      -ms-transform-origin: left center;
+          transform-origin: left center;
+}
+#nav-icon4 span:nth-child(2) {
+	top: 8px;
+	-webkit-transform-origin: left center;
+	    -ms-transform-origin: left center;
+	        transform-origin: left center;
+}
+#nav-icon4 span:nth-child(3) {
+	top: 16px;
+	-webkit-transform-origin: left center;
+	    -ms-transform-origin: left center;
+	        transform-origin: left center;
+}
+#nav-icon4.open span:nth-child(1) {
+	-webkit-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
+	top: -2px;
+	left: 2px;
+}
+#nav-icon4.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+#nav-icon4.open span:nth-child(3) {
+	-webkit-transform: rotate(-45deg);
+	    -ms-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+	top: 18px;
+	left: 2px;
+}
+/*End Mobile Menu icon*/
+.menu_icon{
+	display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/*=================  Start Banner Section  =================*/
+.banner_main{
+	background: url('/images/banner-bg2.jpg') no-repeat scroll 0 0 / cover;
+	position: relative;
+	z-index: 2;
+}
+.banner_main::before{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(179.82deg, rgba(0, 0, 0, 0.66) 30.72%, rgba(0, 0, 0, 0) 120.91%),
+	linear-gradient(180deg, rgba(0, 61, 85, 0.29) 1.85%, rgba(0, 61, 85, 0.058) 38.42%, rgba(0, 61, 85, 0) 73.88%);
+	z-index: -1;
+}
+.banner{
+	padding: 485px 0px 465px 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.banner h1{
+	font-weight: 400;
+	color: #FFFFFF;
+}
+.banner .btn_style{
+	margin-top: 30px;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+/*=================  Start Mission Section  =================*/
+.mission_main{
+	background: #F8F2E3;
+	padding: 185px 0px 210px 0px;
+	position: relative;
+	overflow: hidden;
+}
+.mission_bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+}
+.mission_bg img{
+	width: 250px;
+	height: 100%;
+	object-fit: cover;
+}
+.mission {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 70px;
+}
+.mission_img_wrap{
+	display: flex;
+	justify-content: center;
+}
+.mission_img_wrap img {
+    width: 315px;
+    height: auto;
+}
+.mission_content h2{
+	margin-bottom: 35px;
+}
+.mission_content p{
+	margin-top: 25px;
+	font-size: 20px;
+	color: #003D55;
+}
+.mission_content {
+    max-width: 803px;
+    width: 100%;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*=================  Start Vision Section  =================*/
+.vision_main{
+	background: #003D55;
+	padding: 165px 0px 185px 0px;
+	position: relative;
+	overflow: hidden;
+}
+.vision_main .mission_bg{
+	left: inherit;
+	right: 0;
+}
+.vision_main .mission_img_wrap img{
+	width: 250px !important;
+	height: auto;
+}
+.vision_main .mission_content h2{
+	color: #BE9641;
+}
+.vision_main .mission_content p{
+	color: #FFFFFF;
+}
+.vision_main .mission {
+    justify-content: flex-start;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+/*=================  Start About Montessori Section  =================*/
+.about_main .mission_bg{
+	height: auto;
+}
+.about_main .mission_bg img{
+	height: auto;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/*=================  Start Admission Section  =================*/
+.admission_main {
+    background: #C19947;
+    padding: 115px 0px 170px 0px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+.admission_main::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 22%;
+    height: 100%;
+    background: url('/images/admission-left.png') no-repeat scroll 0 0 / cover;
+    z-index: 3;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.admission_main::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 22%;
+    height: 100%;
+    background: url('/images/admission-right.png') no-repeat scroll 0 0 / cover;
+    z-index: 3;
 }
+.admission_box{
+	position: relative;
+	z-index: 2;
+	text-align: center;
+}
+.admission_box h2{
+	color: #FFFFFF;
+	margin-bottom: 30px;
+}
+.admission_inner {
+    background: #003D55;
+    padding: 60px 15px;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+.admission_inner h3 {
+    font-family: 'Avenir Next LT Pro';
+    font-weight: normal;
+    font-size: 26px;
+    color: #BE9641;
+}
+.admission_inner p {
+    color: #FFFFFFCC;
+    max-width: 850px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 45px;
+    font-size: 18px;
+}
+
+/*=================  Start Recruitment Section  =================*/
+.recruitment_main {
+    background: #F8F2E3;
+    padding: 140px 0px 170px 0px;
+    position: relative;
+    overflow: hidden;
+}
+.recruitment_main::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    background: url("/images/recruitment-bg.png") no-repeat scroll 0 0 / cover;
+}
+.recruitment_head {
+    text-align: center;
+    margin-bottom: 75px;
+    position: relative;
+    z-index: 2;
+}
+.recruitment_head h2 {
+    color: #0F4E59;
+    margin-bottom: 25px;
+}
+.recruitment_head p {
+    color: #003D55;
+    font-size: 20px;
+}
+.recruitment_cards{
+	display: flex;
+	justify-content: center;
+	gap: 13px;
+	max-width: 1120px;
+	margin: auto;
+}
+.job_card {
+    background: #003D55;
+    border-radius: 7px;
+    padding: 40px 30px 35px 38px;
+    /* min-height: 260px; */
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 calc(100% / 3);
+}
+.job_card::before{
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 0;
+	width: 14px;
+	height: 100%;
+	background: #387993;
+	border-radius: 7px 0px 0px 7px;
+}
+.job_card:nth-child(2)::before{
+	background: #56853C;
+}
+.job_card:nth-child(3)::before{
+	background: #C19947;
+}
+.job_card h3 {
+    font-size: 25px;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+.job_card p{
+	color: #FFFFFFCC;
+}
+.job_link {
+    display: inline-block;
+    margin: 15px 0px 25px 0px;
+    font-size: 18px;
+    /* font-weight: 600; */
+    color: #BE9641 !important;
+    text-decoration: underline;
+}
+.job_link:hover{
+	color: #FFFFFF !important;
+}
+.job_meta{
+	margin-top: 18px;
+}
+.job_meta p{
+	color: #FFFFFFCC;
+	margin-bottom: 6px;
+}
+.job_meta a{
+	color: #FFFFFF;
+}
+.job_meta a:hover{
+	color: #BE9641;
+}
+.job_meta p {
+    max-width: 300px;
+}
+
+/*=================  Start Footer Section  =================*/
+.footer_main{
+	background: #FFFFFF;
+	padding: 110px 0px 25px 0px;
+}
+.footer_brand img {
+    width: 260px;
+    height: auto;
+}
+.footer_brand p {
+    margin: 30px 0px 35px 0px;
+    color: #003D55;
+    max-width: 505px;
+    line-height: 165%;
+}
+.footer_brand .btn_style {
+    padding: 10px 35px;
+}
+.footer_links_wrap {
+    display: flex;
+    justify-content: flex-end;
+    gap: 115px;
+}
+.footer_links h4 {
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #003D55;
+    margin-bottom: 20px;
+}
+.footer_links ul li{
+	margin-bottom: 13px;
+}
+.footer_links ul li a {
+    font-size: 15px;
+    color: #003D55;
+}
+.footer_links ul li a:hover{
+	color: #BE9641;
+}
+.footer_bottom {
+    padding: 12px 0px;
+    border-top: 1px solid #003D5526;
+    border-bottom: 1px solid #003D5526;
+    margin: 65px 0px 25px 0px;
+}
+.footer_bottom_links {
+    display: flex;
+    gap: 55px;
+}
+.footer_bottom_links a {
+    font-size: 14px;
+    color: #003D55;
+}
+.footer_bottom_links a:hover{
+	color: #BE9641;
+}
+.footer_social{
+	display: flex;
+	justify-content: flex-end;
+	gap: 12px;
+}
+.footer_social a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* border: 1px solid #E5E5E5; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0B4A56;
+    font-size: 18px;
+    background: #003D550D;
+}
+.footer_social a:hover{
+	background: #BE9641;
+	color: #FFFFFF;
+	border-color: #BE9641;
+}
+.footer_copy p {
+    font-size: 12px;
+    color: #003D55;
+}
+
+/*///////////////////////// Start Registration Page /////////////////////////*/
+.register_banner_main{
+	background: url('/images/register/banner.jpg') no-repeat scroll 0 0 / cover;
+	position: relative;
+	z-index: 2;
+}
+.register_banner_main::before{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(179.82deg, rgba(0, 0, 0, 0.66) 30.72%, rgba(0, 0, 0, 0) 120.91%),
+	linear-gradient(180deg, rgba(0, 61, 85, 0.29) 1.85%, rgba(0, 61, 85, 0.058) 38.42%, rgba(0, 61, 85, 0) 73.88%);
+	z-index: -1;
+}
+.register{
+	max-width: 845px;
+	margin: auto;
+}
+.register_banner{
+	padding: 290px 0px 205px 0px;
+
+}
+.register_banner h1{
+	text-align: center;
+	color: #FFFFFF;
+	font-weight: 400;
+}
+
+/*================= Start Registration Section =================*/
+.register_main{
+	padding: 100px 0px 135px 0px;
+	background: #F8F2E3;
+	position: relative;
+	z-index: 2;
+}
+.register_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 21%;
+    z-index: -1;
+}
+.register_bg img {
+    width: 100%;
+    height: auto;
+}
+.single_form_box{
+	background: #FBF6E8;
+}
+
+.child_details_head {
+    background: #003D55;
+    padding: 14px 20px 14px 30px;
+}
+
+.child_details_head h3 {
+    font-size: 23px;
+    font-weight: 500;
+    color: #FFFFFF;
+    font-family: 'Berlingske Serif';
+}
+
+.child_details_body{
+	padding: 30px 30px 35px 30px;
+	border: 2px solid #BE9641;
+	border-top: none;
+}
+
+/* form elements */
+.form_group {
+    margin-bottom: 30px;
+}
+
+.form_group label {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #374151;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+.form_group label span{
+	color: #C93B3B;
+}
+
+.form_group input,
+.form_group select,
+.form_group textarea {
+    width: 100%;
+    height: 48px;
+    padding: 0px 14px;
+    font-size: 14px;
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+    background: #F9FAFB;
+    outline: none;
+}
+
+.form_group input:focus,
+.form_group select:focus,
+.form_group textarea:focus{
+	border-color: #0B4A56;
+}
+.form_group select{
+	color: #003D55;
+	font-size: 16px;
+}
+.form_group textarea{
+	height: 150px;
+	resize: none;
+    padding: 14px 14px;
+}
+
+/* DOB select */
+.dob_wrap{
+	display: flex;
+	gap: 15px;
+}
+
+.dob_wrap select {
+    flex: 1;
+    appearance: none;
+    background-image: url("/images/register/angle-down.png");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+}
+
+/* radio buttons */
+.radio_wrap {
+    display: flex;
+    gap: 24px;
+    margin-top: 6px;
+}
+.radio_wrap_more{
+	flex-direction: column;
+	gap: 7px;
+}
+
+.radio_item{
+	position: relative;
+	font-size: 16px;
+	color: #2B2B2B;
+	padding-left: 26px;
+	cursor: pointer;
+}
+.radio_wrap label {
+    font-size: 16px;
+    font-weight: 400;
+    color: #374151;
+}
+.radio_item input{
+	position: absolute;
+	opacity: 0;
+}
+
+.radio_item span{
+	position: absolute;
+	left: 0;
+	top: 2px;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	border: 2px solid #0B4A56;
+}
+
+.radio_item input:checked + span{
+	background: #0B4A56;
+	box-shadow: inset 0 0 0 3px #FFFFFF;
+}
+
+.register_top_text p{
+	text-align: center;
+	font-size: 18px;
+	line-height: 30px;
+	color: #003D55;
+}
+.single_content h3{
+    font-family: 'Berlingske Serif';
+	font-size: 23px;
+	line-height: 28px;
+	font-weight: 500;
+	color: #003D55;
+}
+.single_content{
+	margin: 105px 0px 80px 0px;
+}
+.single_contents{
+	margin: 50px 0px;
+}
+.single_content .form_group{
+	margin-top: 20px;
+}
+.single_contents p{
+    font-family: 'Berlingske Serif';
+	margin-bottom: 18px;
+	font-size: 19px;
+	line-height: 28px;
+	font-weight: 500;
+	color: #003D55;
+}
+
+.single_form_box_title h3{
+    font-family: 'Berlingske Serif';
+	font-size: 19px;
+	line-height: 28px;
+	font-weight: 500;
+	color: #003D55;
+	margin-bottom: 20px;
+}
+
+.agreement_item{
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    cursor: pointer;
+    margin-bottom: 18px;
+    font-size: 14px;
+    color: #2B2B2B;
+}
+
+.agreement_item input{
+    position: absolute;
+    opacity: 0;
+}
+
+.checkmark{
+    width: 18px;
+    height: 18px;
+    border: 2px solid #7A7A7A;
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    position: relative;
+}
+
+.agreement_item input:checked + .checkmark{
+    background: #0B4A56;
+    border-color: #0B4A56;
+}
+
+.agreement_item input:checked + .checkmark::after{
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 9px;
+    border: solid #FFFFFF;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.agreement_text {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.required{
+    color: #C93B3B;
+    margin-left: 2px;
+}
+span.agreement_text strong {
+    font-weight: 400;
+}
+.form_submit{
+	margin-top: 50px;
+}
+.form_submit button {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 16px 0px;
+    color: #FFFFFF;
+    background: #BE9641;
+    border-radius: 6px;
+    text-align: center;
+    width: 100%;
+    border: none;
+    transition: 0.3s;
+}
+.form_submit button:hover{
+	background: #977630;
+}
+.single_form_box_title p b{
+	color: #003D55;
+}
+.sfbt_total{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #56853C;
+	padding: 15px 25px;
+	margin: 50px 0px 60px 0px;
+}
+.sfbt_total p {
+    color: #FFFFFF;
+}
+.sfbt_total p b{
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+}
+
+/*///////////////////////// Start Archive Page /////////////////////////*/
+.archive_banner_main{
+	background: url('/images/archive/banner.jpg') no-repeat scroll 0 0 / cover !important;
+}
+.banner_main::before {
+    background: linear-gradient(179.82deg, rgba(0, 0, 0, 0.66) 30.72%, rgba(0, 0, 0, 0) 120.91%), 
+    linear-gradient(180deg, #179ace 1.85%, rgba(0, 61, 85, 0.2) 38.42%, rgba(0, 61, 85, 0) 73.88%);
+}
+.archive_banner_main .banner h1 {
+    max-width: 845px;
+    margin: auto;
+    text-align: center;
+}
+.archive_banner_main .banner p {
+    font-size: 24px;
+    line-height: 100%;
+    color: #FFFFFF;
+    margin-top: 20px;
+}
+
+/*=================  Start Rawḍah Montessori Section  =================*/
+.rawdah_mont_main{
+	padding: 190px 0px 150px 0px;
+	background: #F8F2E3;
+}
+.rawdah_mont{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 50px;
+}
+.rawdah_mont_left img{
+	width: 370px;
+	height: auto;
+	margin-top: 25px;
+}
+.rawdah_mont_right{
+	max-width: 760px;
+	width: 100%;
+}
+.rawdah_mont_right p{
+	margin-bottom: 20px;
+	font-size: 20px;
+	line-height: 30px;
+	color: #000000DE;
+}
+.rawdah_mont_right a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #000000;
+    font-size: 19px;
+    line-height: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 40px;
+}
+.rawdah_mont_right a:hover{
+	color: #BE9641;
+}
+.rawdah_mont_right a img{
+	width: 40px;
+	height: auto;
+}
+
+/*=================  Start Rawḍah Montessori Section  =================*/
+.mission_state_main{
+	padding: 200px 0px;
+	background: #003D55;
+	position: relative;
+	z-index: 2;
+}
+.mission_state_main::before{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('/images/archive/mission-bg.png') no-repeat scroll 0 0 / cover;
+	z-index: -1;
+}
+.mission_state h2{
+	color: #BE9641;
+	text-align: center;
+}
+.mission_state p{
+    font-family: 'Berlingske Serif';
+	max-width: 1200px;
+	margin: auto;
+	margin-top: 80px;
+	font-size: 22px;
+	line-height: 35px;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+/*=================  Start Our Schools Section  =================*/
+.our_school_main{
+	padding: 100px 0px 140px 0px;
+}
+.our_school{
+	max-width: 1140px;
+	margin: auto;
+}
+.our_school_title h2{
+	text-align: center;
+}
+.our_school_boxs{
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	margin-top: 100px;
+}
+.our_school_single{
+	width: 355px;
+	padding: 275px 32px 35px 32px;
+	background: #56853C;
+	position: relative;
+	z-index: 2;
+}
+.oschool_shape {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -1;
+}
+.oschool_shape img{
+	width: 280px;
+	height: auto;
+}
+.oschool_shape2{
+	right: inherit;
+	left: 0;
+}
+.oschool_shape2 img{
+	width: 195px;
+}
+.oschool_shape3{
+	right: 14px;
+}
+.oschool_shape3 img{
+	width: 215px;
+}
+.our_school_single h2 {
+    font-size: 45px;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
+.our_school_single p{
+	font-size: 18px;
+	line-height: 30px;
+	padding: 9px 0px;
+	border-bottom: 1px solid #FFFFFF2E;
+	color: #FFFFFF;
+}
+.our_school_single p:last-child{
+	border-bottom: none;
+}
+.our_school_boxs .our_school_single:nth-child(2){
+	background: #003D55;
+}
+.our_school_boxs .our_school_single:nth-child(3){
+	background: #BE9641;
+}
+
+.montessori_alumni_area{
+	margin-top: 140px;
+	padding-top: 120px;
+	border-top: 1px solid #00000033;
+	display: flex;
+	justify-content: space-between;
+	gap: 50px;
+}
+.montessori_alumni_area h2{
+	color: #000000;
+}
+.montessori_alumni_area p{
+	max-width: 760px;
+	font-size: 20px;
+	line-height: 30px;
+	color: #000000DE;
+}
+
+/*=================  Start Our philosophy Section  =================*/
+.our_philosophy_main{
+	padding: 50px 0px 70px 0px;
+	background: #56853C;
+	position: relative;
+	z-index: 2;
+}
+.our_philosophy_main::before{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('/images/archive/philosophy-bg.png') no-repeat scroll 0 0 / cover;
+	z-index: -1;
+}
+.our_philosophy{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+}
+.our_philosophy img{
+	width: 215px;
+	height: auto;
+}
+.our_philosophy h2{
+	font-size: 40px;
+	font-weight: 400;
+	color: #F8F2E3;
+	text-align: center;
+}
+
+/*=================  Start SMALL GROUP TUITION Section  =================*/
+.eco_school_principles_main{
+	margin: 80px 0px;
+	position: relative;
+	z-index: 2;
+}
+.eco_school_bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: auto;
+	z-index: -1;
+}
+.eco_school_bg img{
+	width: 100%;
+	height: auto;
+}
+.eco_school_bg2 {
+	left: inherit;
+	right: 0;
+}
+.eco_school_principles_contents {
+    padding: 150px 120px 120px 120px;
+    background: #56853C;
+    display: inline-block;
+    margin-top: 340px;
+}
+.eco_school_principles_contents h2{
+	margin-bottom: 40px;
+	color: #FFFFFF;
+	max-width: 630px;
+	font-weight: 400;
+}
+.eco_school_principles_contents p{
+	font-size: 20px;
+	line-height: 30px;
+	margin-top: 25px;
+	color: #FFFFFFDE;
+	max-width: 760px;
+	width: 100%;
+}
+
+.small_group_tuition_main .eco_school_principles_contents,
+.all_students_main .eco_school_principles_contents{
+	margin-left: 25%;
+	/*background: transparent;*/
+}
+.small_group_tuition_main .eco_school_principles_contents h2,
+.small_group_tuition_main .eco_school_principles_contents p,
+.all_students_main .eco_school_principles_contents p{
+	/*color: #000000DE;*/
+}
+.all_students_main .eco_school_principles_contents{
+	background: #F8F2E3;
+}
+.all_students_main .eco_school_principles_contents h2,
+.all_students_main .eco_school_principles_contents p {
+	color: #000000;
+}
+.all_students_main{
+	background: #56853C;
+	padding-bottom: 250px;
+}
+
+/*=================  Start Emotional Well-Being Section  =================*/
+.well_being_main {
+    padding: 90px 0px 280px 0px;
+}
+.well_being{
+	display: flex;
+	justify-content: center;
+}
+.well_being_contents{
+	background: #FFFFFF61;
+	padding: 0px 0px 0px 105px;
+	max-width: 780px;
+	width: 100%;
+	position: relative;
+	z-index: 2;
+}
+.well_being_contents::before{
+	position: absolute;
+	content: "";
+	bottom: 0;
+	right: 0;
+	width: 560px;
+	height: 490px;
+	background: url('/images/archive/well-being-shape1.png') no-repeat scroll 0 0 / cover;
+	z-index: -1;
+}
+.well_being_texts{
+	padding-top: 125px;
+	max-width: 520px;
+}
+.well_being_texts h2 {
+    margin-left: 30px;
+    font-size: 45px;
+    font-weight: 500;
+    max-width: 263px;
+    margin-bottom: 100px;
+    color: #000000;
+    position: relative;
+}
+.well_being_texts h2::before{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: -30px;
+	width: 6px;
+	height: 100%;
+	background: #BE9641;
+}
+.well_being_texts p{
+	margin-top: 25px;
+	font-size: 20px;
+	line-height: 30px;
+	color: #000000DE;
+}
+.well_being_img{
+	max-width: 560px;
+	width: 100%;
+}
+.well_being_img img{
+	width: 100%;
+	height: auto;
+}
+
+/*part-2*/
+.well_being2{
+	margin-top: 105px;
+}
+.well_being2 .well_being_contents {
+    padding: 0px 105px 0px 0px;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}
+.well_being2 .well_being_contents::before{
+	background: url('/images/archive/well-being-shape2.png') no-repeat scroll 0 0 / cover;
+}
+.well_being2 .well_being_texts{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.well_being2 .well_being_texts h2 {
+    max-width: 365px;
+    text-align: right;
+    margin-left: 0px;
+    margin-right: 30px;
+    margin-bottom: 65px;
+}
+.well_being2 .well_being_texts h2::before {
+    background: #56853C;
+    left: inherit;
+    right: -30px;
+}
+
+/*=================  Archive Footer  =================*/
+.archive_footer_main {
+    background: #003D55;
+    padding: 75px 0px 60px 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Main row spacing */
+.archive_footer_row{
+    align-items: flex-start;
+}
+
+/* Brand */
+.archive_footer_brand{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.archive_footer_logo_icon a img{
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+}
+
+.archive_footer_logo_text{
+    margin-top: 18px;
+}
+
+.archive_footer_logo_text h3{
+    font-family: 'Berlingske Serif';
+    font-size: 40px;
+    line-height: 100%;
+    color: #FFFFFF;
+    margin: 0;
+    font-weight: 400;
+    text-transform: lowercase;
+}
+
+.archive_footer_logo_text p{
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    margin-top: 6px;
+    text-transform: uppercase;
+}
+
+/* Footer boxes (with borders like screenshot) */
+.archive_footer_row{
+    display: flex;
+    align-items: stretch;
+}
+.archive_footer_box {
+    border: 1px solid #FFFFFF1A;
+    padding: 35px 20px 50px 45px;
+    height: 100%;
+}
+.archive_footer_box h4 {
+    font-size: 22px;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin-bottom: 22px;
+}
+
+/* Navigation list */
+.archive_footer_box ul li{
+    margin-bottom: 10px;
+}
+.archive_footer_box ul li a {
+    font-size: 14px;
+    color: #FFFFFF;
+}
+.archive_footer_box ul li a:hover{
+    color: #BE9641;
+}
+
+/* Useful info */
+.archive_footer_info p{
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+    line-height: 170%;
+}
+
+.archive_footer_line{
+    width: 95%;
+    height: 1px;
+    background: rgba(255,255,255,0.15);
+    margin: 18px 0px 18px 0px;
+}
+
+.archive_footer_info_item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 10px;
+}
+.archive_footer_info_item i{
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+	transition: 0.3s;
+}
+.archive_footer_info_item:hover{
+    color: #BE9641;
+}
+.archive_footer_info_item:hover i{
+    color: #BE9641;
+}
+
+/* Social */
+.archive_footer_social{
+    display: flex;
+    gap: 14px;
+    margin-top: 6px;
+}
+.archive_footer_social a{
+    color: rgba(255,255,255,0.90);
+    font-size: 16px;
+    transition: 0.3s;
+}
+.archive_footer_social a:hover{
+    color: #BE9641;
+}
+
+/* Copyright */
+.archive_footer_copy{
+    text-align: center;
+    margin-top: 35px;
+}
+.archive_footer_copy p{
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+}
+
+/* Bottom stripes */
+.archive_footer_stripes {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: #E1DECB;
+    padding-top: 16px;
+}
+.archive_footer_stripe{
+    display: block;
+    width: 100%;
+}
+.archive_footer_s2{ height: 15px; background: #BE9641; }
+.archive_footer_s3{ height: 15px; background: #1A1A1A; }
+.archive_footer_s4{ height: 15px; background: #4F7B2F; }
+
+
+@media all and (max-width: 1550px){
+.mission_bg img {
+    width: 200px;
+}
+.admission_main::before {
+    width: 17%;
+}
+.admission_main::after {
+    width: 17%;
+}
+.recruitment_main::before {
+    width: 23%;
+}
+.logo a img {
+    width: 290px;
+}
+.banner {
+    padding: 430px 0px 410px 0px;
+}
+.register_bg {
+    width: 20%;
+}
+
+}
+
+
+
+@media all and (max-width: 1199px){
+.logo a img {
+	width: 250px;
+}
+.menu{
+	position: absolute;
+	top: 125px;
+	left: 0;
+	width: 100%;
+	display: none;
+}
+.menu ul {
+	gap: 12px;
+	padding-bottom: 0px;
+	border-bottom: none;
+	flex-direction: column;
+	background: rgba(0, 61, 85, 0.92);
+	padding: 15px 0px;
+	border-top: 1px solid #c6c6c64f;
+	border-bottom: 1px solid #c6c6c64f;
+}
+.banner {
+	padding: 350px 0px 335px 0px;
+}
+h1 {
+	font-size: 55px;
+}
+.btn_style {
+	padding: 12px 30px;
+	font-size: 16px;
+	border-radius: 5px;
+}
+.banner .btn_style {
+	margin-top: 24px;
+}
+.header {
+	align-items: flex-start;
+	flex-direction: column;
+}
+.logo {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header_main.fixed {
+	padding: 16px 0px 10px 0px;
+}
+.header_main.fixed .menu {
+	top: 97px;
+}
+.menu_icon{
+	display: block;
+}
+.mission_bg {
+	display: none;
+}
+.recruitment_cards {
+	flex-wrap: wrap;
+}
+.mission {
+	justify-content: center;
+	gap: 50px;
+	flex-wrap: wrap;
+}
+.register_banner_main {
+	background: url('/images/register/banner.jpg') no-repeat scroll 69% 0 / cover;
+}
+
+.our_school_boxs {
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.eco_school_principles_contents {
+	padding: 100px 80px 80px 80px;
+	margin-top: 300px;
+}
+.eco_school_principles_contents p {
+	max-width: 630px;
+}
+.all_students_main {
+	padding-bottom: 150px;
+}
+.well_being_contents {
+	padding: 0px 0px 0px 50px;
+}
+.well_being2 .well_being_contents {
+	padding: 0px 50px 0px 0px;
+}
+.well_being_texts {
+	padding-top: 70px;
+	max-width: 440px;
+}
+.well_being_texts h2 {
+	font-size: 36px;
+	margin-bottom: 70px;
+}
+.well_being_texts p {
+	font-size: 16px;
+	line-height: 25px;
+}
+.well_being_img {
+	max-width: 400px;
+}
+.well_being2 .well_being_texts h2 {
+	margin-bottom: 40px;
+}
+
+.well_being_main {
+	padding: 40px 0px 130px 0px;
+}
+.well_being2 {
+	margin-top: 65px;
+}
+
+}
+
+
+
+@media all and (max-width: 991px){
+.menu ul{ gap: 25px; flex-wrap: wrap;}
+.banner{ padding: 260px 0px 240px 0px; }
+
+.mission_content, .about_content{ padding-left: 0px; margin-top: 25px; }
+.footer_links_wrap{ justify-content: flex-start; margin-top: 25px; gap: 40px; }
+
+.footer_bottom_links {
+	gap: 40px;
+}
+.mission_content {
+	order: 2;
+}
+.mission_main {
+	padding: 110px 0px 110px 0px;
+}
+.vision_main .mission {
+	justify-content: center;
+}
+.vision_main {
+	padding: 110px 0px 110px 0px;
+}
+.admission_main::before {
+	z-index: 1;
+}
+.admission_main::after {
+	z-index: 1;
+}
+.admission_main {
+	padding: 90px 0px 110px 0px;
+}
+.footer_bottom {
+	padding: 12px 0px;
+	margin: 25px 0px 25px 0px;
+}
+.footer_brand img {
+	width: 225px;
+}
+
+.rawdah_mont {
+	gap: 40px;
+	flex-direction: column;
+}
+.rawdah_mont_left img {
+	width: 300px;
+}
+.rawdah_mont_left {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.rawdah_mont_main {
+	padding: 90px 0px 90px 0px;
+}
+.mission_state_main {
+	padding: 120px 0px;
+}
+.mission_state p {
+	margin-top: 60px;
+}
+.our_school_boxs {
+	gap: 30px;
+	margin-top: 70px;
+}
+.eco_school_principles_contents {
+	padding: 50px 35px 35px 35px;
+	margin-top: 250px;
+}
+.small_group_tuition_main .eco_school_principles_contents, 
+.all_students_main .eco_school_principles_contents {
+	margin-left: 0%;
+}
+.well_being_img {
+	max-width: 100%;
+}
+.well_being_contents {
+	padding: 70px 15px 50px 50px;
+	order: 2;
+}
+.well_being2 .well_being_contents {
+	padding: 50px 15px 50px 50px;
+	justify-content: flex-start;
+	text-align: left;
+}
+.well_being {
+	flex-direction: column;
+}
+.well_being_texts {
+	padding-top: 0px;
+}
+.well_being_contents::before {
+	width: 450px;
+	height: 400px;
+}
+.archive_footer_row {
+	gap: 25px;
+}
+.archive_footer_copy {
+	margin-top: 25px;
+	margin-bottom: 40px;
+}
+.well_being_main {
+	padding: 0px 0px 90px 0px;
+}
+.well_being2 .well_being_texts {
+	align-items: flex-start;
+}
+.well_being2 .well_being_texts h2 {
+	margin-left: 30px;
+	margin-right: 0px;
+	text-align: left;
+}
+.well_being2 .well_being_texts h2::before {
+	right: inherit;
+	left: -30px;
+}
+
+}
+
+
+
+@media all and (max-width: 767px){
+.logo a img {
+	width: 200px;
+}
+.menu {
+	top: 110px;
+}
+.header_main.fixed .menu {
+	top: 82px;
+}
+.job_card {
+	flex: 0 0 calc(100% / 2);
+}
+.footer_social {
+	justify-content: flex-start;
+}
+.footer_bottom {
+	gap: 15px;
+}
+.footer_social a {
+	width: 35px;
+	height: 35px;
+	font-size: 16px;
+}
+.register_banner_main {
+	background: url('/images/register/banner.jpg') no-repeat scroll 49% 0 / cover;
+}
+.single_content h3 {
+	font-size: 20px;
+	line-height: 25px;
+}
+.child_details_head h3 {
+	font-size: 20px;
+}
+.child_details_head {
+	padding: 12px 15px 12px 15px;
+}
+.form_group input, .form_group select, .form_group textarea {
+	height: 43px;
+}
+.mb-0 {
+	margin-bottom: 12px !important;
+}
+.single_contents p {
+	margin-bottom: 15px;
+	font-size: 16px;
+	line-height: 25px;
+}
+.child_details_body {
+	padding: 20px 20px 25px 20px;
+}
+.sfbt_total {
+	padding: 12px 15px;
+	margin: 40px 0px 40px 0px;
+}
+.mt-50 {
+	margin-top: 40px !important;
+}
+.form_submit button {
+	padding: 13px 0px;
+}
+.montessori_alumni_area {
+	margin-top: 65px;
+	padding-top: 50px;
+	gap: 30px;
+	flex-direction: column;
+	text-align: center;
+}
+
+}
+
+
+
+@media all and (max-width: 575px){
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+h1{ font-size: 45px; }
+h2{ font-size: 30px; }
+.admission_inner{ padding: 35px 18px; }
+.logo a img {
+	width: 180px;
+}
+.header_main {
+	padding: 25px 0px;
+}
+.menu {
+	top: 100px;
+}
+.menu ul {
+	gap: 18px;
+}
+.header_main.fixed {
+	padding: 20px 0px 15px 0px;
+}
+.header_main.fixed .menu {
+	top: 86px;
+}
+.btn_style {
+	padding: 10px 25px;
+	font-size: 15px;
+	border-radius: 4px;
+}
+.banner .btn_style {
+	margin-top: 20px;
+}
+.banner {
+	padding: 280px 0px 270px 0px;
+}
+.banner_main {
+	background: url('/images/banner-bg2.jpg') no-repeat scroll 42% 0 / cover;
+}
+.mission_img_wrap img {
+	width: 75%;
+}
+.mission_content p {
+	margin-top: 20px;
+	font-size: 18px;
+}
+.mission_content h2 {
+	margin-bottom: 30px;
+}
+.recruitment_main::before {
+	display: none;
+}
+.recruitment_main {
+	padding: 90px 0px 90px 0px;
+}
+.footer_main {
+	padding: 90px 0px 25px 0px;
+}
+.admission_main {
+	padding: 90px 0px 100px 0px;
+}
+.mission_main {
+	padding: 100px 0px 90px 0px;
+}
+.vision_main {
+	padding: 100px 0px 90px 0px;
+}
+.job_card {
+	flex: 0 0 100%;
+}
+.recruitment_head {
+	margin-bottom: 60px;
+}
+.footer_brand img {
+	width: 200px;
+}
+.footer_bottom_links {
+	gap: 30px;
+}
+.child_details_body{
+	padding: 20px;
+}
+.dob_wrap{
+	flex-direction: column;
+}
+.register_main {
+	padding: 90px 0px 100px 0px;
+}
+.form_group select {
+	padding: 12px 14px;
+}
+.form_submit button {
+	padding: 12px 0px;
+	font-size: 16px;
+}
+.form_submit {
+	margin-top: 45px;
+}
+
+.rawdah_mont_left img {
+	width: 250px;
+}
+.rawdah_mont_right p {
+	font-size: 18px;
+	line-height: 28px;
+}
+.rawdah_mont_right a {
+	gap: 12px;
+	font-size: 16px;
+	line-height: 25px;
+	margin-top: 35px;
+}
+.rawdah_mont_right a img {
+	width: 30px;
+}
+.mission_state p {
+	margin-top: 70px;
+	font-size: 18px;
+	line-height: 29px;
+	font-weight: 400;
+}
+.our_school_single h2 {
+	font-size: 35px;
+	margin-bottom: 10px;
+}
+.our_school_single p {
+	font-size: 16px;
+	line-height: 25px;
+	padding: 9px 0px;
+}
+.oschool_shape img {
+	width: 230px;
+}
+.oschool_shape2 img {
+	width: 170px;
+}
+.oschool_shape3 img {
+	width: 180px;
+}
+.montessori_alumni_area p {
+	font-size: 18px;
+	line-height: 28px;
+}
+.our_philosophy img {
+	width: 180px;
+}
+.our_philosophy h2 {
+	font-size: 33px;
+	line-height: 110%;
+}
+.eco_school_principles_contents {
+	padding: 40px 20px 35px 20px;
+	margin-top: 148px;
+}
+.eco_school_principles_contents p {
+	font-size: 17px;
+	line-height: 25px;
+	margin-top: 20px;
+}
+.eco_school_principles_contents h2 {
+	margin-bottom: 35px;
+}
+.all_students_main {
+	padding-bottom: 40px;
+}
+.well_being_contents {
+	padding: 60px 15px 40px 20px;
+}
+.well_being_contents::before {
+	width: 300px;
+	height: 280px;
+}
+.well_being_texts h2::before {
+	width: 4px;
+}
+.well_being2 .well_being_contents {
+	padding: 60px 15px 40px 20px;
+}
+.archive_footer_logo_icon a img {
+	width: 150px;
+}
+.archive_footer_s2{ height: 10px; background: #BE9641; }
+.archive_footer_s3{ height: 10px; background: #1A1A1A; }
+.archive_footer_s4{ height: 10px; background: #4F7B2F; }
+
+.archive_footer_stripes {
+	gap: 5px;
+	padding-top: 12px;
+}
+.archive_footer_copy {
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+.well_being_texts h2 {
+	margin-left: 25px;
+}
+.well_being_texts h2::before {
+	width: 4px;
+	left: -25px;
+}
+.well_being2 .well_being_texts h2 {
+	margin-left: 25px;
+}
+.well_being2 .well_being_texts h2::before {
+	left: -25px;
+}
+.mission_state_main {
+	padding: 90px 0px;
+}
+.mission_state p {
+	margin-top: 60px;
+}
+
+}
+
+
