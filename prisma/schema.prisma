@@ -1,0 +1,84 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model Registration {
+  id                       Int      @id @default(autoincrement())
+  createdAt                DateTime @default(now())
+
+  // Year of entry
+  yearOfEntry              String
+
+  // Child Details
+  childFirstName           String
+  childLastName            String
+  childNameUsed            String?
+  childDobDay              String
+  childDobMonth            String
+  childDobYear             String
+  childGender              String
+
+  // Home Address
+  homeStreetAddress        String
+  homeAddressLine2         String?
+  homeCity                 String
+  homeCounty               String?
+  homePostcode             String
+  homeCountry              String
+
+  // Parent/Guardian 1
+  parent1Title             String?
+  parent1FirstName         String
+  parent1LastName          String
+  parent1Relationship      String
+  parent1Mobile            String
+  parent1Email             String
+  parent1Occupation        String?
+  parent1WorkStreetAddress String?
+  parent1WorkAddressLine2  String?
+  parent1WorkCity          String?
+  parent1WorkCounty        String?
+  parent1WorkPostcode      String?
+  parent1WorkCountry       String?
+
+  // Parent/Guardian 2
+  parent2Title             String?
+  parent2FirstName         String?
+  parent2LastName          String?
+  parent2Relationship      String?
+  parent2Mobile            String?
+  parent2Email             String?
+  parent2Occupation        String?
+  parent2WorkStreetAddress String?
+  parent2WorkAddressLine2  String?
+  parent2WorkCity          String?
+  parent2WorkCounty        String?
+  parent2WorkPostcode      String?
+  parent2WorkCountry       String?
+
+  // Additional questions
+  schoolTourAttended       String?
+  healthConditions         String?
+  previousSchool           String?
+  otherChildrenAges        String?
+  childrenAlreadyAttending String?
+  nationality              String?
+  ethnicOrigin             String?
+  languageAtHome           String?
+  socialCareInvolvement    String?
+  furtherInformation       String?  @db.Text
+  hearAboutSchool          String?
+
+  // Payment & Consent
+  feesAgreement            Boolean  @default(false)
+  withdrawalAgreement      Boolean  @default(false)
+
+  // LMS sync status
+  lmsSynced                Boolean  @default(false)
+  lmsSyncError             String?  @db.Text
+}
