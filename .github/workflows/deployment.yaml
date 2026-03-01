@@ -34,7 +34,7 @@ jobs:
           script: |
             export PATH="$HOME/.local/share/fnm:$PATH"
             eval "$(fnm env)"
-            cd /var/www/html/rawdah-montessori
+            cd /var/www/html/rawdahmontessori
             git pull origin main
             npm ci --production
             npx prisma generate
