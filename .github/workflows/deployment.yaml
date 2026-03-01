@@ -36,8 +36,11 @@ jobs:
             eval "$(fnm env)"
             cd /var/www/html/rawdahmontessori
             git pull origin main
-            npm ci --production
+            npm ci
             npx prisma generate
             npx prisma migrate deploy
             npm run build
-            pm2 restart rawdah-montessori || pm2 start ecosystem.config.js
+            pm2 stop rawdah-montessori || true
+            fuser -k 3000/tcp || true
+            sleep 2
+            pm2 start ecosystem.config.js
