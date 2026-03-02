@@ -1477,6 +1477,14 @@ span.agreement_text strong {
 	color: #FFFFFF;
 	font-weight: 400;
 }
+.dashboard_banner_subtitle{
+	text-align: center;
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 18px;
+	margin-top: 8px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
 
 /*=================  Start Dashboard Documents Section  =================*/
 .dashboard_docs_main{
@@ -1489,10 +1497,30 @@ span.agreement_text strong {
 .dashboard_category:last-child{
 	margin-bottom: 0;
 }
+.dashboard_category_header{
+	display: flex;
+	align-items: center;
+	gap: 14px;
+}
 .dashboard_category h2{
 	text-transform: uppercase;
 	font-size: 28px;
 	margin-bottom: 8px;
+}
+.dashboard_category_count{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 28px;
+	height: 28px;
+	padding: 0 8px;
+	background: #003D55;
+	color: #FFFFFF;
+	font-size: 13px;
+	font-weight: 600;
+	border-radius: 14px;
+	margin-bottom: 6px;
+	letter-spacing: 0.02em;
 }
 .dashboard_category_underline{
 	width: 80px;
@@ -1509,24 +1537,42 @@ span.agreement_text strong {
 	padding: 18px 22px;
 	margin-bottom: 16px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-	transition: all 0.3s;
+	transition: all 0.3s ease;
 	color: #003D55;
 	text-decoration: none;
+	border: 1px solid transparent;
 }
 .dashboard_doc_card:hover{
-	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-	color: #BE9641;
-	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(0, 61, 85, 0.12);
+	color: #003D55;
+	transform: translateY(-3px);
+	border-color: #BE9641;
 }
 .dashboard_doc_card i{
 	font-size: 28px;
 	color: #BE9641;
 	flex-shrink: 0;
+	transition: transform 0.3s ease;
+}
+.dashboard_doc_card:hover i{
+	transform: scale(1.1);
 }
 .dashboard_doc_card span{
 	font-size: 15px;
 	font-weight: 500;
 	line-height: 1.3;
+	flex: 1;
+}
+.dashboard_doc_card_arrow{
+	font-size: 12px !important;
+	color: #ccc !important;
+	opacity: 0;
+	transition: all 0.3s ease !important;
+	transform: none !important;
+}
+.dashboard_doc_card:hover .dashboard_doc_card_arrow{
+	opacity: 1;
+	color: #BE9641 !important;
 }
 
 
@@ -1867,10 +1913,12 @@ h1 {
 	text-align: center;
 }
 .dashboard_banner{ padding: 200px 0px 120px 0px; }
+.dashboard_banner_subtitle{ font-size: 15px; letter-spacing: 1.5px; }
 .dashboard_login_card{ margin: 0 15px; padding: 35px 25px; }
 .dashboard_login_logo img{ width: 180px; }
 .dashboard_docs_main{ padding: 50px 0px 70px 0px; }
 .dashboard_category h2{ font-size: 22px; }
+.dashboard_category_count{ min-width: 24px; height: 24px; font-size: 12px; }
 
 }
 

@@ -7,6 +7,10 @@ export const metadata = {
 };
 
 export default function DashboardDocumentsPage() {
+  const visibleCategories = dashboardCategories.filter(
+    (cat) => cat.documents.length > 0
+  );
+
   return (
     <>
       <Header linkPrefix="/" />
@@ -18,6 +22,9 @@ export default function DashboardDocumentsPage() {
             <div className="col-md-12">
               <div className="dashboard_banner">
                 <h1>Dashboard</h1>
+                <p className="dashboard_banner_subtitle">
+                  School documents &amp; policies
+                </p>
               </div>
             </div>
           </div>
@@ -27,9 +34,14 @@ export default function DashboardDocumentsPage() {
       {/* Documents */}
       <section className="dashboard_docs_main">
         <div className="container">
-          {dashboardCategories.map((category) => (
+          {visibleCategories.map((category) => (
             <div key={category.slug} className="dashboard_category">
-              <h2>{category.title}</h2>
+              <div className="dashboard_category_header">
+                <h2>{category.title}</h2>
+                <span className="dashboard_category_count">
+                  {category.documents.length}
+                </span>
+              </div>
               <div className="dashboard_category_underline"></div>
               <div className="row">
                 {category.documents.map((doc) => (
@@ -42,6 +54,7 @@ export default function DashboardDocumentsPage() {
                     >
                       <i className="fa-solid fa-file-pdf"></i>
                       <span>{doc.name}</span>
+                      <i className="fa-solid fa-arrow-up-right-from-square dashboard_doc_card_arrow"></i>
                     </a>
                   </div>
                 ))}
