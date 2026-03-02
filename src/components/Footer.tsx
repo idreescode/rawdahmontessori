@@ -32,10 +32,7 @@ export default function Footer() {
                 <h4>POLICIES</h4>
                 <div className="footer_policies_grid">
                   <ul>
-                    <li><a href="/documents/admission-policy.pdf" target="_blank">Admission Policy</a></li>
                     <li><a href="/documents/academic-performance-reporting.pdf" target="_blank">Academic Reporting</a></li>
-                    <li><a href="/documents/access-security-policy.pdf" target="_blank">Access &amp; Security</a></li>
-                    <li><a href="/documents/aln-send-policy.pdf" target="_blank">ALN &amp; SEND</a></li>
                     <li><a href="/documents/attendance-policy.pdf" target="_blank">Attendance Policy</a></li>
                     <li><a href="/documents/behaviour-policy.pdf" target="_blank">Behaviour Policy</a></li>
                     <li><a href="/documents/complaints-policy.pdf" target="_blank">Complaints Policy</a></li>
@@ -44,16 +41,12 @@ export default function Footer() {
                     <li><a href="/documents/ehc-policy.pdf" target="_blank">EHC Policy</a></li>
                   </ul>
                   <ul>
-                    <li><a href="/documents/eyfs-montessori-policy.pdf" target="_blank">EYFS Montessori</a></li>
                     <li><a href="/documents/first-aid-policy.pdf" target="_blank">First Aid Policy</a></li>
                     <li><a href="/documents/health-safety-policy.pdf" target="_blank">Health &amp; Safety</a></li>
-                    <li><a href="/documents/lone-working-policy.pdf" target="_blank">Lone Working Policy</a></li>
                     <li><a href="/documents/montessori-british-values.pdf" target="_blank">Montessori &amp; British Values</a></li>
-                    <li><a href="/documents/privacy-cctv-photography-policy.pdf" target="_blank">Privacy &amp; CCTV</a></li>
                     <li><a href="/documents/pupil-assessment-policy.pdf" target="_blank">Pupil Assessment</a></li>
                     <li><a href="/documents/rse-policy.pdf" target="_blank">RSE Policy</a></li>
                     <li><a href="/documents/safeguarding-child-protection-policy.pdf" target="_blank">Safeguarding</a></li>
-                    <li><a href="/documents/staff-training-policy.pdf" target="_blank">Staff Training</a></li>
                   </ul>
                 </div>
               </div>

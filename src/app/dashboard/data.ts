@@ -27,14 +27,19 @@ export const dashboardCategories: DashboardCategory[] = [
     ],
   },
   {
-    title: "Health Safety Checks",
+    title: "Health & Safety",
     slug: "health-and-safety",
     documents: [
-      { name: "Disability Access Risk Assessment", filename: "disability-access-risk-assessment.pdf" },
       { name: "Fire Risk Assessment", filename: "fire-risk-assessment.pdf" },
-      { name: "Health & Safety Risk Assessment", filename: "health-and-safety-risk-assessment.pdf" },
+      { name: "Health and Safety Risk Assessment", filename: "health-and-safety-risk-assessment.pdf" },
+      { name: "Disability Access Risk Assessment", filename: "disability-access-risk-assessment.pdf" },
       { name: "Legionella Risk Assessment", filename: "legionella-risk-assessment.pdf" },
-      { name: "WSL & WSP", filename: "wsl-and-wsp.pdf" },
+      { name: "Legionella Sample Test", filename: "legionella-sample-test.pdf" },
+      { name: "Electrical Safety Certificate", filename: "electrical-safety-certificate.pdf" },
+      { name: "Heating Safety Certificate", filename: "heating-safety-certificate.pdf" },
+      { name: "Emergency Light Certificate", filename: "emergency-light-certificate.pdf" },
+      { name: "Fire Extinguisher Service Certificate", filename: "fire-extinguisher-service-certificate.pdf" },
+      { name: "PAT Testing Certificate", filename: "pat-testing-certificate.pdf" },
     ],
   },
   {
@@ -90,7 +95,6 @@ export const dashboardCategories: DashboardCategory[] = [
       { name: "Lone Working Policy", filename: "lone-working-policy.pdf" },
       { name: "Privacy, CCTV & Photography Policy", filename: "privacy-cctv-photography-policy.pdf" },
       { name: "Pupil Assessment Policy", filename: "pupil-assessment-policy.pdf" },
-      { name: "Rawdah EAL Montessori Draft", filename: "rawdah-eal-montessori-draft.pdf" },
       { name: "RSE Policy", filename: "rse-policy.pdf" },
       { name: "Staff Training Policy", filename: "staff-training-policy.pdf" },
     ],
@@ -113,7 +117,7 @@ export const dashboardCategories: DashboardCategory[] = [
     ],
   },
   {
-    title: "Safer Recruitment",
+    title: "Safeguarding",
     slug: "safer-recruitment",
     documents: [
       { name: "Anti-Bullying Policy", filename: "anti-bullying-policy.pdf" },
@@ -122,6 +126,8 @@ export const dashboardCategories: DashboardCategory[] = [
       { name: "Safer Recruitment Checklist", filename: "safer-recruitment-checklist.pdf" },
       { name: "Safer Recruitment Criminal Record Disclosure", filename: "safer-recruitment-criminal-record-disclosure.pdf" },
       { name: "Safer Recruitment Policy", filename: "safer-recruitment-policy.pdf" },
+      { name: "SCR", filename: "scr.pdf" },
+      { name: "DBS Status", filename: "dbs-status.pdf" },
     ],
   },
   {
