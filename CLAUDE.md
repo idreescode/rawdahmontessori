@@ -98,3 +98,4 @@ Copy `.env.example` to `.env` and configure:
 - Policy documents go in `public/documents/`
 - Dashboard PDFs go in `public/documents/dashboard/<category-slug>/`
 - Database schema changes require a Prisma migration
+- **Never auto-commit** — always ask the user before committing changes
