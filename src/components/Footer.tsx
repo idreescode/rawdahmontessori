@@ -28,23 +28,34 @@ export default function Footer() {
                   <li><a href="/#recruitment">Recruitment</a></li>
                 </ul>
               </div>
-              <div className="footer_links">
-                <ul>
-                  <li><a href="/documents/British Values_IslamicEthos_Montessori.pdf" target="_blank">Montessori &amp; Islam &amp; British Values</a></li>
-                  <li><a href="/documents/RM_Curriculum Policy .pdf" target="_blank">Curriculum Policy</a></li>
-                  <li><a href="/documents/RM_Safeguarding_Policyv2.pdf" target="_blank">Safeguarding Policy</a></li>
-                  <li><a href="/documents/RM_Behaviour Policy.pdf" target="_blank">Behaviour Policy</a></li>
-                  <li><a href="/documents/RM_Anti-Bullying Policy.pdf" target="_blank">Anti-Bullying Policy</a></li>
-                  <li><a href="/documents/RMS_Attendance_Policy.pdf" target="_blank">Attendance Policy</a></li>
-                  <li><a href="/documents/RM_Complaint Policy.pdf" target="_blank">Complaint Policy</a></li>
-                  <li><a href="/documents/RM_Health_Safety_Policy.pdf" target="_blank">Health &amp; Safety</a></li>
-                  <li><a href="/documents/RM_Pupil_Progress.pdf" target="_blank">Pupil Progress Policy</a></li>
-                  <li><a href="/documents/Rawdah EAL Montessori Primary School Draft v01 2025.pdf" target="_blank" title="Rawdah Montessori – EAL Policy">EAL Policy</a></li>
-                  <li><a href="/documents/Rawdah EHC_Montessori Primary School Draft v01 2025.pdf" target="_blank" title="Rawdah Montessori – EHC Policy">EHC Policy</a></li>
-                  <li><a href="/documents/Rawdah First Aid Policy Montessori Primary School Draft v01.pdf" target="_blank" title="Rawdah Montessori – First Aid Policy">First Aid Policy</a></li>
-                  <li><a href="/documents/Rawdah RSE_Montessori Primary School Draft v01.pdf" target="_blank" title="Rawdah Montessori – RSE Policy">RSE Policy</a></li>
-                  <li><a href="/documents/Statement of Academic Performance.pdf" target="_blank" title="Rawdah Montessori – Academic Reporting">Academic Reporting</a></li>
-                </ul>
+              <div className="footer_policies">
+                <h4>POLICIES</h4>
+                <div className="footer_policies_grid">
+                  <ul>
+                    <li><a href="/documents/admission-policy.pdf" target="_blank">Admission Policy</a></li>
+                    <li><a href="/documents/academic-performance-reporting.pdf" target="_blank">Academic Reporting</a></li>
+                    <li><a href="/documents/access-security-policy.pdf" target="_blank">Access &amp; Security</a></li>
+                    <li><a href="/documents/aln-send-policy.pdf" target="_blank">ALN &amp; SEND</a></li>
+                    <li><a href="/documents/attendance-policy.pdf" target="_blank">Attendance Policy</a></li>
+                    <li><a href="/documents/behaviour-policy.pdf" target="_blank">Behaviour Policy</a></li>
+                    <li><a href="/documents/complaints-policy.pdf" target="_blank">Complaints Policy</a></li>
+                    <li><a href="/documents/curriculum-policy.pdf" target="_blank">Curriculum Policy</a></li>
+                    <li><a href="/documents/eal-policy.pdf" target="_blank">EAL Policy</a></li>
+                    <li><a href="/documents/ehc-policy.pdf" target="_blank">EHC Policy</a></li>
+                  </ul>
+                  <ul>
+                    <li><a href="/documents/eyfs-montessori-policy.pdf" target="_blank">EYFS Montessori</a></li>
+                    <li><a href="/documents/first-aid-policy.pdf" target="_blank">First Aid Policy</a></li>
+                    <li><a href="/documents/health-safety-policy.pdf" target="_blank">Health &amp; Safety</a></li>
+                    <li><a href="/documents/lone-working-policy.pdf" target="_blank">Lone Working Policy</a></li>
+                    <li><a href="/documents/montessori-british-values.pdf" target="_blank">Montessori &amp; British Values</a></li>
+                    <li><a href="/documents/privacy-cctv-photography-policy.pdf" target="_blank">Privacy &amp; CCTV</a></li>
+                    <li><a href="/documents/pupil-assessment-policy.pdf" target="_blank">Pupil Assessment</a></li>
+                    <li><a href="/documents/rse-policy.pdf" target="_blank">RSE Policy</a></li>
+                    <li><a href="/documents/safeguarding-child-protection-policy.pdf" target="_blank">Safeguarding</a></li>
+                    <li><a href="/documents/staff-training-policy.pdf" target="_blank">Staff Training</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

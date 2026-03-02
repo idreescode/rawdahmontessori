@@ -470,9 +470,10 @@ h2{
 .footer_links_wrap {
     display: flex;
     justify-content: flex-end;
-    gap: 115px;
+    gap: 50px;
 }
-.footer_links h4 {
+.footer_links h4,
+.footer_policies h4 {
     font-size: 22px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -488,6 +489,27 @@ h2{
 }
 .footer_links ul li a:hover{
 	color: #BE9641;
+}
+.footer_policies {
+    flex: 1;
+}
+.footer_policies_grid {
+    display: flex;
+    gap: 35px;
+}
+.footer_policies_grid ul {
+    flex: 1;
+}
+.footer_policies_grid ul li {
+    margin-bottom: 11px;
+}
+.footer_policies_grid ul li a {
+    font-size: 14px;
+    color: #003D55;
+    transition: color 0.3s;
+}
+.footer_policies_grid ul li a:hover {
+    color: #BE9641;
 }
 .footer_bottom {
     padding: 12px 0px;
@@ -1728,7 +1750,8 @@ h1 {
 .banner{ padding: 260px 0px 240px 0px; }
 
 .mission_content, .about_content{ padding-left: 0px; margin-top: 25px; }
-.footer_links_wrap{ justify-content: flex-start; margin-top: 25px; gap: 40px; }
+.footer_links_wrap{ justify-content: flex-start; margin-top: 25px; gap: 30px; flex-wrap: wrap; }
+.footer_policies{ flex: 1 1 100%; }
 
 .footer_bottom_links {
 	gap: 40px;
@@ -1982,6 +2005,10 @@ h2{ font-size: 30px; }
 }
 .footer_main {
 	padding: 90px 0px 25px 0px;
+}
+.footer_policies_grid {
+	flex-direction: column;
+	gap: 0;
 }
 .admission_main {
 	padding: 90px 0px 100px 0px;
